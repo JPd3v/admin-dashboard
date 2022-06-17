@@ -1,0 +1,253 @@
+:root {
+    --main-color: #3b82f6;
+    --second-color: #e2e8f0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.header {
+    padding: 16px;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+}
+
+.navbar-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-search {
+    width: 80%;
+}
+
+.nav-search input {
+    width: 100%;
+    background-color: var(--second-color);
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    padding-left: 5px;
+}
+
+.navbar-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar-right .avatar {
+    height: 40px;
+    width: 40px;
+}
+
+.avatar img {
+    max-height: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    border-radius: 50%;
+}
+
+.profile-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    margin-top: 10px;
+}
+
+.profile-user {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+.profile-user .avatar {
+    height: 60px;
+    width: 60px;
+}
+
+.profile-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.profile-buttons>button {
+    padding: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    background-color: var(--main-color);
+    font-family: inherit;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    padding: 15px 0px 0px 20px;
+    background-color: var(--main-color);
+}
+
+.sidebar .top a {
+    font-size:2.7rem;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+    font-size: 2rem;
+}
+
+.sidebar a {
+    color: rgb(255, 255, 255);
+}
+
+.sidebar path {
+    fill: rgb(255, 255, 255);
+}
+
+.main-content {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 40px 20px 20px 20px;
+    gap: 16px;
+    background-color: var(--second-color)
+}
+
+.projects {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+}
+
+.projects::before {
+    position: absolute;
+    content: 'Your Projects';
+    top: -30px;
+    font-weight: 800;
+}
+
+.projects .card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-left: 5px #8b5cf6 solid;
+    border-radius: 7px;
+    gap: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.svg-buttons {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.sidebar button,
+.svg-buttons>button,
+.button-svg {
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.main-content-right-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 60px;
+}
+
+.announcements {
+    position: relative;
+    display: grid;
+    grid-auto-rows: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.announcements>div {
+    border-bottom: 1px rgb(228, 227, 227) solid;
+}
+
+.announcements::before {
+    position: absolute;
+    content: "Announcements";
+    top: -30px;
+    font-weight: 800;
+}
+
+.trending {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.trending::before {
+    position: absolute;
+    content: "Trending";
+    top: -30px;
+    font-weight: 800;
+}
+
+.trending .avatar {
+    height: 50px;
+    width: 50px;
+}
+
+.trending .card {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+.trending .text div+div {
+    color: #747474;
+}
